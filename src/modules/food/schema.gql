@@ -1,0 +1,17 @@
+extend type Mutation {
+	addFood(foodName:String!,foodImg:String!): MutationResponse!
+	changeFood(foodId:ID! ,foodName:String!):MutationResponse!
+	deleteFood(foodId:ID!): MutationResponse!
+}
+
+extend type Query {
+	foods(foodId: ID): [Food!]!
+}
+
+type Food {
+	foodId: ID!
+	foodName: String!
+	foodImg: String!
+}
+
+
